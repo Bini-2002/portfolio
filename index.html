@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'fade-in': 'fadeIn 1s ease-in',
+                        'slide-in': 'slideIn 0.5s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image animate-float">
+                <img src="personal.jpg" alt="Biniyam Getachew" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="hero-text">
+                <h1 class="text-5xl font-bold mb-6 animate-fade-in">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 animate-slide-in">
+                        I'm Biniyam Getachew
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in delay-100">
+                    Full Stack Web Developer specializing in modern web technologies and creating end-to-end solutions
+                </p>
+                <a href="#projects" class="cta-button group relative overflow-hidden">
+                    <span class="relative z-10">View My Work</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm a dedicated developer with a passion for creating beautiful and functional web applications. I specialize in front-end development and love turning ideas into reality.</p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul class="skills-grid">
+                            <li class="skill-item">
+                                <img src="Skillimages/html.png" alt="HTML5">
+                                <span>HTML5</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/css.png" alt="CSS3">
+                                <span>CSS3</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/javascript.png" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/react.png" alt="React">
+                                <span>React</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/python.jpg" alt="Python">
+                                <span>Python</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/django.jpg" alt="Django">
+                                <span>Django</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/postgre.png" alt="PostgreSQL">
+                                <span>PostgreSQL</span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="Skillimages/git.png" alt="Git">
+                                <span>Git</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project/youtube.png" alt="YouTube Clone">
+                    </div>
+                    <div class="project-info">
+                        <h3>YouTube Clone</h3>
+                        <p>A responsive YouTube clone built with HTML, CSS, and JavaScript. Features include video player, comments section, and responsive design.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bini-2002/Web-Development" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project/oop.png" alt="Python OOP">
+                    </div>
+                    <div class="project-info">
+                        <h3>Python OOP</h3>
+                        <p>Object-Oriented Programming project in Python demonstrating core OOP concepts like inheritance, encapsulation, and polymorphism.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bini-2002/oop-project" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://cdn.dribbble.com/userupload/14898856/file/original-accb2ef29d68a2a29119c5e3ff116f33.png" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 3</h3>
+                        <p>A brief description of the project and its key features.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
