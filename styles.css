@@ -61,6 +61,7 @@
 .contact-info-item { display:flex; align-items:flex-start; gap:1rem; background:linear-gradient(120deg,var(--card-bg) 80%,var(--background-light)); padding:1rem 1.2rem; border-radius:14px; box-shadow:0 4px 14px -6px rgba(220,38,38,0.12); transition:.3s; }
 .contact-info-item:hover { box-shadow:0 8px 26px -8px rgba(220,38,38,0.25); transform:translateY(-3px); }
 .contact-icon-circle { width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#dc2626,#7f1d1d); color:#fff; font-size:1.2rem; flex-shrink:0; box-shadow:0 4px 12px -4px rgba(0,0,0,.35); }
+.contact-icon-circle .ci { width:26px; height:26px; }
 .contact-info-text { font-size:.98rem; font-weight:500; color:var(--text-dark); line-height:1.4; }
 .contact-info-text a { color:var(--primary-dark); text-decoration:underline dotted; transition:.25s; }
 .contact-info-text a:hover { color:var(--primary-color); }
@@ -70,6 +71,7 @@
 .social-icon.github { background:linear-gradient(135deg,#374151,#111827); }
 .social-icon.telegram { background:linear-gradient(135deg,#0ea5e9,#0369a1); }
 .social-icon:hover { transform:translateY(-4px) scale(1.05); box-shadow:0 10px 28px -8px rgba(0,0,0,.45); }
+.social-icon .ci { width:24px; height:24px; }
 .contact-form-col { background:linear-gradient(120deg,var(--card-bg) 75%,var(--background-light)); padding:2rem 1.8rem 2.2rem; border-radius:18px; box-shadow:0 8px 32px -10px rgba(220,38,38,0.15); display:flex; flex-direction:column; gap:1.4rem; }
 .form-title { margin:0 0 .5rem; font-size:1.55rem; font-weight:600; letter-spacing:.5px; color:var(--primary-dark); }
 .contact-send-form { display:flex; flex-direction:column; gap:1.1rem; }
@@ -263,17 +265,8 @@
     font-weight: 700;
     color: var(--primary-color);
 }
-.exp-icon {
-    font-size: 1.7rem;
-    color: var(--primary-dark);
-    background: var(--background-light);
-    border-radius: 50%;
-    padding: 0.4rem 0.6rem;
-    box-shadow: 0 2px 8px 0 rgba(220,38,38,0.10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.exp-icon { width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#dc2626,#7f1d1d); color:#fff; box-shadow:0 4px 12px -4px rgba(0,0,0,.25); }
+.exp-icon .ci-exp { width:26px; height:26px; }
 .exp-meta {
     display: flex;
     flex-wrap: wrap;
@@ -282,10 +275,7 @@
     color: var(--secondary-color);
     margin-bottom: 0.2rem;
 }
-.exp-meta i {
-    margin-right: 0.4em;
-    color: var(--primary-color);
-}
+.exp-meta svg.ci-exp { width:18px; height:18px; margin-right:0.35em; color:var(--primary-color); vertical-align:middle; }
 .exp-body {
     margin-top: 0.5rem;
 }
@@ -308,16 +298,7 @@
     color: var(--text-light);
     font-size: 1.01rem;
 }
-.exp-achievements li:before {
-    content: '\f00c';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    top: 0.1em;
-    color: var(--primary-color);
-    font-size: 1em;
-}
+.exp-achievements li:before { content:""; position:absolute; left:0; top:0.55em; width:10px; height:10px; background:linear-gradient(135deg,#dc2626,#7f1d1d); border-radius:3px; box-shadow:0 0 0 2px rgba(220,38,38,0.25); }
 /* Project Card Animations */
 .animate-fade-in-up {
     opacity: 0;
