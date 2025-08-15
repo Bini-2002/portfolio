@@ -1,213 +1,721 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Devicon icon font for colorful technology icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'bounce-slow': 'bounce 3s infinite',
-                        'fade-in': 'fadeIn 1s ease-in',
-                        'slide-in': 'slideIn 0.5s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideIn: {
-                            '0%': { transform: 'translateX(-100%)' },
-                            '100%': { transform: 'translateX(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'fade-in': 'fadeIn 1s ease-in',
+              'slide-in': 'slideIn 0.5s ease-out',
+              float: 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideIn: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            },
+          },
+        },
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">Portfolio</div>
-            <button class="hamburger" title="Open navigation menu" aria-label="Open navigation menu">
-                <span class="sr-only">Open navigation menu</span>
-                <span></span>
-                <span></span>
-                <span></span>
+      <div class="nav-content">
+        <div class="logo">Biniyam</div>
+        <button
+          class="hamburger"
+          title="Open navigation menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="sr-only">Open navigation menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              title="Toggle dark mode"
+            >
+              <i class="fas fa-moon"></i>
             </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-image animate-float">
-                <img src="personal.jpg" alt="Biniyam Getachew" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <div class="hero-text">
-                <h1 class="text-5xl font-bold mb-6 animate-fade-in">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 animate-slide-in">
-                        I'm Biniyam Getachew
-                    </span>
-                </h1>
-                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in delay-100">
-                    Full Stack Web Developer specializing in modern web technologies and creating end-to-end solutions
-                </p>
-                <a href="#projects" class="cta-button group relative overflow-hidden">
-                    <span class="relative z-10">View My Work</span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                </a>
-            </div>
+      <div class="hero-content">
+        <div class="hero-image animate-float">
+          <img
+            src="personal.jpg"
+            alt="Biniyam Getachew"
+            class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+          />
         </div>
+        <div class="hero-text">
+          <h1 class="text-5xl font-bold mb-6 animate-fade-in">
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 animate-slide-in"
+            >
+              I'm Biniyam Getachew
+            </span>
+          </h1>
+          <p
+            class="text-xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in delay-100 max-w-2xl leading-relaxed"
+          >
+            Full‑stack engineer building performant, secure, and scalable web
+            products with
+            <strong class="font-semibold text-gray-800 dark:text-gray-100"
+              >React</strong
+            >
+            on the front end and
+            <strong class="font-semibold text-gray-800 dark:text-gray-100"
+              >Django / FastAPI</strong
+            >
+            services backed by
+            <strong class="font-semibold text-gray-800 dark:text-gray-100"
+              >MySQL</strong
+            >. I focus on clean architecture, API design, accessibility, and
+            measurable performance improvements.
+          </p>
+          <a href="#projects" class="cta-button group relative overflow-hidden">
+            <span class="relative z-10">View My Work</span>
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+            ></div>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm a dedicated developer with a passion for creating beautiful and functional web applications. I specialize in front-end development and love turning ideas into reality.</p>
-                    <div class="skills">
-                        <h3>Skills</h3>
-                        <ul class="skills-grid">
-                            <li class="skill-item">
-                                <img src="Skillimages/html.png" alt="HTML5">
-                                <span>HTML5</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/css.png" alt="CSS3">
-                                <span>CSS3</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/javascript.png" alt="JavaScript">
-                                <span>JavaScript</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/react.png" alt="React">
-                                <span>React</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/python.jpg" alt="Python">
-                                <span>Python</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/django.jpg" alt="Django">
-                                <span>Django</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/postgre.png" alt="PostgreSQL">
-                                <span>PostgreSQL</span>
-                            </li>
-                            <li class="skill-item">
-                                <img src="Skillimages/git.png" alt="Git">
-                                <span>Git</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="about py-16">
+      <div class="container">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+          About Me
+        </h2>
+        <div class="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
+          <div class="space-y-6">
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              I'm a full‑stack developer who enjoys translating ideas into fast,
+              accessible, and maintainable products. I balance strong UI craft
+              with robust backend engineering and pragmatic delivery.
+            </p>
+            <div class="space-y-5">
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-700"></span>Front‑End
+                Focus
+              </h3>
+              <ul
+                class="list-none m-0 p-0 space-y-2 text-sm text-gray-600 dark:text-gray-400"
+              >
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Modern UI Architecture:</strong
+                  >
+                  Component‑driven development with React & Tailwind, clean
+                  state separation, reusable patterns.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Accessibility (a11y):</strong
+                  >
+                  Semantic HTML, keyboard flows, color contrast, ARIA where
+                  needed—not by default.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Performance:</strong
+                  >
+                  Image optimization, code splitting, lazy hydration mindset,
+                  Lighthouse‑guided refinements.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Design Consistency:</strong
+                  >
+                  Token thinking (spacing, color, typography) for cohesive
+                  styling and rapid iteration.
+                </li>
+              </ul>
             </div>
+          </div>
+          <div class="space-y-6">
+            <div class="space-y-5">
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-700"></span>Backend
+                Engineering
+              </h3>
+              <ul
+                class="list-none m-0 p-0 space-y-2 text-sm text-gray-600 dark:text-gray-400"
+              >
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >API Design:</strong
+                  >
+                  RESTful services with Django & FastAPI emphasizing clarity,
+                  validation, and version readiness.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Data Layer:</strong
+                  >
+                  Relational modeling in PostgreSQL & MySQL with attention to
+                  indexing & query efficiency.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Security & Reliability:</strong
+                  >
+                  Auth flows, input sanitization, rate‑limiting concepts,
+                  structured logging.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Scalability Mindset:</strong
+                  >
+                  Separation of concerns, background task readiness, caching
+                  strategies.
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-5">
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-700"></span>Engineering
+                Values
+              </h3>
+              <ul
+                class="list-none m-0 p-0 space-y-2 text-sm text-gray-600 dark:text-gray-400"
+              >
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Maintainability:</strong
+                  >
+                  Readable code, clear naming, small focused modules.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Testing Mindset:</strong
+                  >
+                  Intent to grow unit/integration coverage (PyTest / Jest)
+                  around core logic.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Performance Budgeting:</strong
+                  >
+                  Watching bundle size & TTFB as features evolve.
+                </li>
+                <li>
+                  <strong class="text-gray-800 dark:text-gray-200"
+                    >Continuous Learning:</strong
+                  >
+                  Iterating on tooling, deployment workflows & monitoring.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="skills" class="about py-16">
+      <div class="container">
+        <div class="section-head tech-skills line-icons">
+          <div class="line-item">
+            <span class="line-text eyebrow no-bg">Technical Skills</span>
+            <span class="line-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                class="svg-icon lightning"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" />
+              </svg>
+            </span>
+          </div>
+          <div class="line-item">
+            <span class="line-text main">Full‑Stack</span>
+            <span class="line-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                class="svg-icon spark"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 3v4" />
+                <path d="M12 17v4" />
+                <path d="m3.3 7 3.5 2" />
+                <path d="m17.2 15 3.5 2" />
+                <path d="M3.3 17 6.8 15" />
+                <path d="m17.2 9 3.5-2" />
+                <path d="m8 12 4 2 4-2-4-2-4 2Z" />
+              </svg>
+            </span>
+          </div>
+          <div class="line-item">
+            <span class="line-text sub">Technology Stack</span>
+            <span class="line-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                class="svg-icon code"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m8 18-6-6 6-6" />
+                <path d="m16 6 6 6-6 6" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="about-text space-y-6">
+            <div class="skills space-y-10">
+              <div class="skills-groups flex flex-col gap-12">
+                <!-- Front-end -->
+                <div class="skill-category">
+                  <h3
+                    class="text-xl font-semibold mb-4 flex items-center gap-2"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-red-700"></span
+                    >Front‑end
+                  </h3>
+                  <ul class="flex flex-wrap gap-6">
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-html5-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">HTML5</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-css3-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">CSS3</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-javascript-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">JavaScript</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-react-original colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">React</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Backend -->
+                <div class="skill-category">
+                  <h3
+                    class="text-xl font-semibold mb-4 flex items-center gap-2"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-red-700"></span>Backend
+                  </h3>
+                  <ul class="flex flex-wrap gap-6">
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-django-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">Django</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-fastapi-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">FastAPI</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-postgresql-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">PostgreSQL</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-mysql-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">MySQL</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-git-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">Git / VCS</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                  <h3
+                    class="text-xl font-semibold mb-4 flex items-center gap-2"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-red-700"></span
+                    >Programming Languages
+                  </h3>
+                  <ul class="flex flex-wrap gap-6">
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-python-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">Python</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-javascript-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">JavaScript (ES6+)</span>
+                    </li>
+                    <li class="flex flex-col items-center gap-1 text-center">
+                      <i
+                        class="devicon-sqlite-plain colored text-5xl"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="text-sm">SQL</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Currently deepening knowledge in testing (PyTest / Jest), API
+                performance tuning, and deployment workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project/youtube.png" alt="YouTube Clone">
-                    </div>
-                    <div class="project-info">
-                        <h3>YouTube Clone</h3>
-                        <p>A responsive YouTube clone built with HTML, CSS, and JavaScript. Features include video player, comments section, and responsive design.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Bini-2002/Web-Development" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project/oop.png" alt="Python OOP">
-                    </div>
-                    <div class="project-info">
-                        <h3>Python OOP</h3>
-                        <p>Object-Oriented Programming project in Python demonstrating core OOP concepts like inheritance, encapsulation, and polymorphism.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Bini-2002/oop-project" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.dribbble.com/userupload/14898856/file/original-accb2ef29d68a2a29119c5e3ff116f33.png" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project 3</h3>
-                        <p>A brief description of the project and its key features.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10">Projects</h2>
+        <div class="project-grid">
+          <!-- Campus-Cartel -->
+          <div class="project-card animate-fade-in-up">
+            <div class="project-info">
+              <div class="project-meta flex items-center justify-between mb-3">
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-calendar-alt text-blue-500"></i> 2025
+                </span>
+                <span class="project-type text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-database"></i> Backend Project
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+                <i class="fas fa-university text-red-500"></i> Campus-Cartel
+              </h3>
+              <p class="mb-3 text-base">
+                A robust Django backend platform designed for campus communities. Campus-Cartel enables students to showcase their skills, collaborate on projects, and connect through a secure, real-time chat system—all within a private, campus-focused web application.
+              </p>
+              <div class="project-stack mb-3 flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-python-plain colored text-lg"></i> Python
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-django-plain colored text-lg"></i> Django
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="fas fa-plug text-green-600"></i> REST-API
+                </span>
+              </div>
+              <div class="project-links mt-auto">
+                <a href="https://github.com/Bini-2002/Campus-Cartel" class="project-link" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
+          </div>
+          <!-- TodoApp -->
+          <div class="project-card animate-fade-in-up" style="animation-delay: 0.1s;">
+            <div class="project-info">
+              <div class="project-meta flex items-center justify-between mb-3">
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-calendar-alt text-blue-500"></i> 2025
+                </span>
+                <span class="project-type text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-database"></i> Backend Project
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+                <i class="fas fa-tasks text-green-600"></i> TodoApp
+              </h3>
+              <p class="mb-3 text-base">
+                A simple yet powerful to-do list manager built with FastAPI and MySQL. TodoApp allows users to efficiently create, update, organize, and track their daily tasks with a clean API and persistent storage.
+              </p>
+              <div class="project-stack mb-3 flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-python-plain colored text-lg"></i> Python
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-fastapi-plain colored text-lg"></i> FastAPI
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-mysql-plain colored text-lg"></i> MySQL
+                </span>
+              </div>
+              <div class="project-links mt-auto">
+                <a href="https://github.com/Bini-2002/FastAPI-Projects/tree/main/TodoApp" class="project-link" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Amazon Clone -->
+          <div class="project-card animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="project-info">
+              <div class="project-meta flex items-center justify-between mb-3">
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-calendar-alt text-blue-500"></i> 2024
+                </span>
+                <span class="project-type text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-desktop"></i> Frontend Project
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+                <i class="fab fa-amazon text-yellow-500"></i> Amazon Clone
+              </h3>
+              <p class="mb-3 text-base">
+                A dynamic web application inspired by Amazon, built to demonstrate modern frontend development. Features a responsive layout, interactive product listings, and a user-friendly interface that mimics real-world e-commerce experiences.
+              </p>
+              <div class="project-stack mb-3 flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-html5-plain colored text-lg"></i> HTML
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-css3-plain colored text-lg"></i> CSS
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-javascript-plain colored text-lg"></i> JavaScript
+                </span>
+              </div>
+              <div class="project-links mt-auto">
+                <a href="https://github.com/Bini-2002/Amazon-Clone" class="project-link" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Gada Special Economic Zone Website -->
+          <div class="project-card animate-fade-in-up" style="animation-delay: 0.3s;">
+            <div class="project-info">
+              <div class="project-meta flex items-center justify-between mb-3">
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-calendar-alt text-blue-500"></i> 2025
+                </span>
+                <span class="project-type text-xs font-semibold bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded px-2 py-1 flex items-center gap-1">
+                  <i class="fas fa-layer-group"></i> Full-Stack
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+                <i class="fas fa-globe-asia text-purple-600"></i> Gada Special Economic Zone Website
+              </h3>
+              <p class="mb-3 text-base">
+                A comprehensive web platform for the Gada Special Economic Zone, designed to promote services and attract global investors. Built with a modern full-stack approach, it features interactive content, seamless navigation, and robust backend integration to support business growth and international collaboration.
+              </p>
+              <div class="project-stack mb-3 flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-python-plain colored text-lg"></i> Python
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-django-plain colored text-lg"></i> Django
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="fas fa-plug text-green-600"></i> REST-API
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-javascript-plain colored text-lg"></i> JavaScript
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-react-original colored text-lg"></i> React
+                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
+                  <i class="devicon-sqlite-plain colored text-lg"></i> SQLite
+                </span>
+              </div>
+              <div class="project-links mt-auto">
+                <a href="https://github.com/Bini-2002/Gada-ecnomic-zone-website" class="project-link" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Experience</h2>
+        <div class="exp-timeline">
+          <!-- Experience 1 -->
+          <div class="exp-card animate-fade-in-up">
+            <div class="exp-header">
+              <div class="exp-title-row">
+                <span class="exp-icon"><i class="fas fa-server"></i></span>
+                <h3 class="exp-title">Backend Developer Intern</h3>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-company"><i class="fas fa-building"></i> Ethronics</span>
+                <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Adama, Ethiopia</span>
+                <span class="exp-duration"><i class="fas fa-calendar-alt"></i> June 2024 – August 2024</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p class="exp-desc">
+                Served as a Backend Developer for an E-learning platform dedicated to robotics and electronics students, utilizing Django REST Framework to deliver a robust and interactive application.
+              </p>
+              <ul class="exp-achievements">
+                <li>Acquired hands-on experience in backend development within a professional environment.</li>
+                <li>Collaborated effectively with cross-functional teams to deliver project milestones.</li>
+                <li>Designed comprehensive database diagrams to support scalable architecture.</li>
+                <li>Developed efficient data models and RESTful API endpoints.</li>
+                <li>Implemented secure authentication and authorization mechanisms.</li>
+                <li>Applied unit and integration testing to ensure code quality and reliability.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Experience 2 -->
+          <div class="exp-card animate-fade-in-up" style="animation-delay:0.15s;">
+            <div class="exp-header">
+              <div class="exp-title-row">
+                <span class="exp-icon"><i class="fas fa-laptop-code"></i></span>
+                <h3 class="exp-title">Full-Stack Developer Intern</h3>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-company"><i class="fas fa-building"></i> Gada Special Economic Zone Authority</span>
+                <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Adama, Ethiopia</span>
+                <span class="exp-duration"><i class="fas fa-calendar-alt"></i> June 2025 – August 2025</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p class="exp-desc">
+                Developed a blog website from scratch using React.js for the client-side and FastAPI for the server-side. Designed UML diagrams and database architecture for a Land Administration system, ensuring robust and scalable solutions.
+              </p>
+              <ul class="exp-achievements">
+                <li>Engineered reusable React components and managed state using modern hooks.</li>
+                <li>Integrated frontend with backend APIs for seamless data flow.</li>
+                <li>Conducted unit and integration testing to maintain high code standards.</li>
+                <li>Designed UML diagrams adhering to object-oriented programming principles.</li>
+                <li>Architected large-scale database systems for enterprise applications.</li>
+                <li>Implemented secure authentication and authorization workflows.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-                <div class="social-links">
-                    <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                </div>
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+          <form id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
             </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="#" class="social-link" title="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="social-link" title="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
