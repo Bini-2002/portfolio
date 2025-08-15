@@ -52,22 +52,32 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission handling
+// Contact form submission (mailto fallback)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    const statusEl = contactForm.querySelector('.form-status');
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Here you would typically send the form data to a server
-        // For now, we'll just show a success message
-        alert('Thank you for your message! I will get back to you soon.');
-        
-        // Clear the form
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        if (!name || !email || !message) {
+            if (statusEl) statusEl.textContent = 'Please fill out all fields.';
+            return;
+        }
+        // Basic email format check
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            if (statusEl) statusEl.textContent = 'Enter a valid email address.';
+            return;
+        }
+        if (statusEl) statusEl.textContent = 'Opening your email client...';
+        const subject = encodeURIComponent('Portfolio Contact from ' + name);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        const mailtoLink = `mailto:binigetachew18@gmail.com?subject=${subject}&body=${body}`;
+        // Open mail client
+        window.location.href = mailtoLink;
+        setTimeout(() => { if (statusEl) statusEl.textContent = 'If your email client didn\'t open, you can email me directly.'; }, 1200);
         contactForm.reset();
     });
 }

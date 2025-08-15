@@ -13,6 +13,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dymI59l8HK5vYuqbWtaXDpUe1koXSPo6e7i0rGUNShUMHbOWcZH/5LiCFYl8a9kaI0s+XkG4Z5qX6L2bHg3k8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -69,7 +77,7 @@
               class="theme-toggle"
               title="Toggle dark mode"
             >
-              <i class="fas fa-moon"></i>
+              <i class="fas fa-moon" aria-hidden="true"></i>
             </button>
           </li>
         </ul>
@@ -450,16 +458,10 @@
           <div class="project-card animate-fade-in-up">
             <div class="project-info">
               <div class="project-meta flex items-center justify-between mb-3">
-                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-calendar-alt text-blue-500"></i> 2025
-                </span>
-                <span class="project-type text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-database"></i> Backend Project
-                </span>
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-calendar-alt text-blue-500"></i> 2025</span>
+                <span class="project-type text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-database"></i> Backend Project</span>
               </div>
-              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-                <i class="fas fa-university text-red-500"></i> Campus-Cartel
-              </h3>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-university text-red-500"></i> Campus-Cartel</h3>
               <p class="mb-3 text-base">
                 A robust Django backend platform designed for campus communities. Campus-Cartel enables students to showcase their skills, collaborate on projects, and connect through a secure, real-time chat system—all within a private, campus-focused web application.
               </p>
@@ -470,31 +472,21 @@
                 <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
                   <i class="devicon-django-plain colored text-lg"></i> Django
                 </span>
-                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
-                  <i class="fas fa-plug text-green-600"></i> REST-API
-                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1"><i class="fas fa-plug text-green-600"></i> REST-API</span>
               </div>
               <div class="project-links mt-auto">
-                <a href="https://github.com/Bini-2002/Campus-Cartel" class="project-link" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+                <a href="https://github.com/Bini-2002/Campus-Cartel" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
               </div>
             </div>
           </div>
           <!-- TodoApp -->
-          <div class="project-card animate-fade-in-up" style="animation-delay: 0.1s;">
+          <div class="project-card animate-fade-in-up delay-100">
             <div class="project-info">
               <div class="project-meta flex items-center justify-between mb-3">
-                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-calendar-alt text-blue-500"></i> 2025
-                </span>
-                <span class="project-type text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-database"></i> Backend Project
-                </span>
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-calendar-alt text-blue-500"></i> 2025</span>
+                <span class="project-type text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-database"></i> Backend Project</span>
               </div>
-              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-                <i class="fas fa-tasks text-green-600"></i> TodoApp
-              </h3>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-tasks text-green-600"></i> TodoApp</h3>
               <p class="mb-3 text-base">
                 A simple yet powerful to-do list manager built with FastAPI and MySQL. TodoApp allows users to efficiently create, update, organize, and track their daily tasks with a clean API and persistent storage.
               </p>
@@ -510,26 +502,18 @@
                 </span>
               </div>
               <div class="project-links mt-auto">
-                <a href="https://github.com/Bini-2002/FastAPI-Projects/tree/main/TodoApp" class="project-link" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+                <a href="https://github.com/Bini-2002/FastAPI-Projects/tree/main/TodoApp" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
               </div>
             </div>
           </div>
           <!-- Amazon Clone -->
-          <div class="project-card animate-fade-in-up" style="animation-delay: 0.2s;">
+          <div class="project-card animate-fade-in-up delay-200">
             <div class="project-info">
               <div class="project-meta flex items-center justify-between mb-3">
-                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-calendar-alt text-blue-500"></i> 2024
-                </span>
-                <span class="project-type text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-desktop"></i> Frontend Project
-                </span>
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-calendar-alt text-blue-500"></i> 2024</span>
+                <span class="project-type text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-desktop"></i> Frontend Project</span>
               </div>
-              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-                <i class="fab fa-amazon text-yellow-500"></i> Amazon Clone
-              </h3>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fab fa-amazon text-yellow-500"></i> Amazon Clone</h3>
               <p class="mb-3 text-base">
                 A dynamic web application inspired by Amazon, built to demonstrate modern frontend development. Features a responsive layout, interactive product listings, and a user-friendly interface that mimics real-world e-commerce experiences.
               </p>
@@ -545,26 +529,18 @@
                 </span>
               </div>
               <div class="project-links mt-auto">
-                <a href="https://github.com/Bini-2002/Amazon-Clone" class="project-link" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+                <a href="https://github.com/Bini-2002/Amazon-Clone" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
               </div>
             </div>
           </div>
           <!-- Gada Special Economic Zone Website -->
-          <div class="project-card animate-fade-in-up" style="animation-delay: 0.3s;">
+          <div class="project-card animate-fade-in-up delay-300">
             <div class="project-info">
               <div class="project-meta flex items-center justify-between mb-3">
-                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-calendar-alt text-blue-500"></i> 2025
-                </span>
-                <span class="project-type text-xs font-semibold bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded px-2 py-1 flex items-center gap-1">
-                  <i class="fas fa-layer-group"></i> Full-Stack
-                </span>
+                <span class="project-year text-xs font-semibold bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-calendar-alt text-blue-500"></i> 2025</span>
+                <span class="project-type text-xs font-semibold bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded px-2 py-1 flex items-center gap-1"><i class="fas fa-layer-group"></i> Full-Stack</span>
               </div>
-              <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-                <i class="fas fa-globe-asia text-purple-600"></i> Gada Special Economic Zone Website
-              </h3>
+              <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-globe-asia text-purple-600"></i> Gada Special Economic Zone Website</h3>
               <p class="mb-3 text-base">
                 A comprehensive web platform for the Gada Special Economic Zone, designed to promote services and attract global investors. Built with a modern full-stack approach, it features interactive content, seamless navigation, and robust backend integration to support business growth and international collaboration.
               </p>
@@ -575,9 +551,7 @@
                 <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
                   <i class="devicon-django-plain colored text-lg"></i> Django
                 </span>
-                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
-                  <i class="fas fa-plug text-green-600"></i> REST-API
-                </span>
+                <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1"><i class="fas fa-plug text-green-600"></i> REST-API</span>
                 <span class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-xs rounded px-2 py-1">
                   <i class="devicon-javascript-plain colored text-lg"></i> JavaScript
                 </span>
@@ -589,9 +563,7 @@
                 </span>
               </div>
               <div class="project-links mt-auto">
-                <a href="https://github.com/Bini-2002/Gada-ecnomic-zone-website" class="project-link" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+                <a href="https://github.com/Bini-2002/Gada-ecnomic-zone-website" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
               </div>
             </div>
           </div>
@@ -632,7 +604,7 @@
             </div>
           </div>
           <!-- Experience 2 -->
-          <div class="exp-card animate-fade-in-up" style="animation-delay:0.15s;">
+          <div class="exp-card animate-fade-in-up delay-150">
             <div class="exp-header">
               <div class="exp-title-row">
                 <span class="exp-icon"><i class="fas fa-laptop-code"></i></span>
@@ -662,49 +634,50 @@
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact contact-clean">
       <div class="container">
-        <h2>Get in Touch</h2>
-        <div class="contact-content">
-          <form id="contact-form">
-            <div class="form-group">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Your Name"
-              />
+        <h2 class="contact-heading">Contact</h2>
+        <div class="contact-layout">
+          <div class="contact-info-col">
+            <ul class="contact-info-list" aria-label="Primary contact details">
+              <li class="contact-info-item">
+                <span class="contact-icon-circle"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                <span class="contact-info-text"><strong>Email:</strong> <a href="mailto:binigetachew18@gmail.com">binigetachew18@gmail.com</a></span>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-icon-circle"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                <span class="contact-info-text"><strong>Call:</strong> <a href="tel:+251946364625">+251 94 636 4625</a></span>
+              </li>
+            </ul>
+            <div class="contact-social-wrap" aria-label="Social links">
+              <p class="social-label">Social Links:</p>
+              <div class="contact-social">
+                <a href="https://t.me/Honestly_Toxic" class="social-icon telegram" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://github.com/Bini-2002" class="social-icon github" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
             </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Your Email"
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                id="message"
-                name="message"
-                required
-                placeholder="Your Message"
-              ></textarea>
-            </div>
-            <button type="submit" class="submit-button">Send Message</button>
-          </form>
-          <div class="social-links">
-            <a href="#" class="social-link" title="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="#" class="social-link" title="LinkedIn"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="#" class="social-link" title="Twitter"
-              ><i class="fab fa-twitter"></i
-            ></a>
+          </div>
+          <div class="contact-form-col">
+            <h3 class="form-title">Send a Message</h3>
+            <form id="contact-form" class="contact-send-form" novalidate>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name" />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com" />
+              </div>
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Write your message..."></textarea>
+              </div>
+              <button type="submit" class="send-btn">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </div>
