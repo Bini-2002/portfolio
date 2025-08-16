@@ -55,7 +55,8 @@
     transition: border .3s, box-shadow .3s, background .3s;
 }
 .field textarea { min-height:150px; }
-.field input:focus, .field textarea:focus {
+.dark-theme .field input:focus,
+.dark-theme .field textarea:focus {
   outline: none !important;
   border-color: #3b82f6 !important; /* A subtle blue to indicate focus */
   box-shadow: none !important;
