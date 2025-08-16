@@ -56,14 +56,12 @@
 }
 .field textarea { min-height:150px; }
 .field input:focus, .field textarea:focus {
-            outline: none;
-            border-color: #222a3a !important;
-            box-shadow: none !important;
-            background: #070c18 !important;
-            color: #f1f5f9 !important;
-}
-
-/* Fix for browser autofill styles overriding dark theme */
+  outline: none !important;
+  border-color: #3b82f6 !important; /* A subtle blue to indicate focus */
+  box-shadow: none !important;
+  background-color: #020617 !important; /* The darkest background color */
+  color: #f1f5f9 !important;
+}/* Fix for browser autofill styles overriding dark theme */
 
 
 .modern-btn { display:inline-flex; align-items:center; gap:.7rem; background:linear-gradient(90deg,#6366f1,#8b5cf6); color:#fff; font-weight:600; font-size:1rem; border:none; padding:.95rem 1.6rem; border-radius:14px; cursor:pointer; position:relative; overflow:hidden; transition:background .35s, transform .35s, box-shadow .35s; }
