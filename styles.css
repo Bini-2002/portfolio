@@ -61,7 +61,7 @@
   border-color: #3b82f6 !important; /* A subtle blue to indicate focus */
   box-shadow: none !important;
   background-color: #020617 !important; /* The darkest background color */
-  color: #f1f5f9 !important;
+  color: #1e293b !important; /* Dark text color for visibility */
 }/* Fix for browser autofill styles overriding dark theme */
 
 
