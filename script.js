@@ -1,27 +1,3 @@
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const icon = themeToggle.querySelector('i');
-
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateIcon(savedTheme);
-}
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateIcon(newTheme);
-});
-
-function updateIcon(theme) {
-    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
